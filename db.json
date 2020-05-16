@@ -1,0 +1,28 @@
+{
+    "products":
+    [
+        {
+            "id":1,
+            "name":"iphone 11",
+            "price":100000
+        },
+        {
+            "id":2,
+            "name":"iphone 10",
+            "price":65000
+        }
+    ],
+    "users":
+    [
+        {
+        "id":1,
+        "name":"admin",
+        "password":"root"
+        },
+        {
+            "id":2,
+            "name":"Rishabh",
+            "password":"rmalhotra"
+        }
+    ]
+}

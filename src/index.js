@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const TITLE="RapidBasket";
 ReactDOM.render(
   <React.StrictMode>
     <App />
