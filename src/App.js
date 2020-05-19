@@ -1,15 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
-import NavbarComponent from './components/Shared/NavbarComponent';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+import NavbarComponent  from "./components/Shared/Navbar.component";
+import { Route, Switch } from "react-router-dom";
+import LoginPage from "./components/Login/Login.component";
+import ProductList from './components/Product/ProductList.component'
 
-const TITLE="Rapid Basket";
+const TITLE = "Rapid Basket";
 function App() {
-  document.title=TITLE;
+  document.title = TITLE;
   return (
-    <NavbarComponent />
-    
+    <React.Fragment>
+      <NavbarComponent />
+      <Switch>
+        <Route exact path="/" component={ProductList} />
+        <Route exact path="/login" component={LoginPage} />
+      </Switch>
+    </React.Fragment>
   );
 }
 
