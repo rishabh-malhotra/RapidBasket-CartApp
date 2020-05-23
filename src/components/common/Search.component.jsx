@@ -1,18 +1,19 @@
-import React , { Component } from "react";
-import {Form,FormControl,Button} from "react-bootstrap";
+import React, { Component } from "react";
+import { Form, FormControl, Button } from "react-bootstrap";
 
-class Search extends Component{
+class Search extends Component {
 
-    constructor(){
+    constructor() {
         super();
     }
-    render(){
-        return(
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-info">Search</Button>
-            </Form>
-
+    render() {
+        return (
+            <React.Fragment>
+                <Form inline>
+                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                    <Button variant="outline-info">Search</Button>
+                </Form>
+            </React.Fragment>
         );
     }
 }

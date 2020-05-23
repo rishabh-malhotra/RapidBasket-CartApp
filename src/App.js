@@ -4,7 +4,7 @@ import "./App.css";
 import NavbarComponent  from "./components/Shared/Navbar.component";
 import { Route, Switch } from "react-router-dom";
 import LoginPage from "./components/Login/Login.component";
-import ProductList from './components/Product/ProductList.component'
+import ProductsPage from './components/Product/ProductsPage'
 
 const TITLE = "Rapid Basket";
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <React.Fragment>
       <NavbarComponent />
       <Switch>
-        <Route exact path="/" component={ProductList} />
+        <Route exact path="/" component={ProductsPage} />
         <Route exact path="/login" component={LoginPage} />
       </Switch>
     </React.Fragment>

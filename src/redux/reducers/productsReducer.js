@@ -6,7 +6,7 @@ const initalState={
     isProductsLoading:false,
 }
 
-export const prooductsReducer = (state = initalState , action) => {
+export const productsReducer = (state = initalState , action) => {
     switch(action.types){
         case types.GET_PRODUCTS_SUCCESS :
             return Object.assign({}, ...state, {products:action.products}, {totalProducts:action.products.length}, {isProductsLoading:false} );

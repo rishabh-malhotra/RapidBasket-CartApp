@@ -6,14 +6,12 @@ class ProductList extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <Product />
-        </div>
+      <div className="row">
+        <Product />
       </div>
     );
   }

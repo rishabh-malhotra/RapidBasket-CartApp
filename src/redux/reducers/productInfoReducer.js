@@ -6,7 +6,7 @@ const initalState = {
     error: {}
 }
 
-const productInfoReducer=(state=initalState,action)=>{
+export const productInfoReducer = (state=initalState,action)=>{
     switch(action.types){
         case  types.GET_PRODUCT_SUCCESS:
             return Object.assign({}, ...state, {product:action.product},{isProductInfoLoading:false});
@@ -16,6 +16,5 @@ const productInfoReducer=(state=initalState,action)=>{
             return Object.assign({}, ...state, {error:action.error},{isProductInfoLoading:false});
         default:
             return initalState    
-    } 
-
-}
+    }
+} 
