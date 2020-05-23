@@ -1,30 +1,18 @@
 import axios from "axios";
+import { handleResponse,handleError } from './apiUtils'
 
+const BASE_URL = 'http://localhost:4000/products';
 
 function getAllProducts(){
-    let products;
-    axios.get("http://localhost:4000/products")
-    .then(
-        (response) => {products = response.data;console.log("response",products);
-    }).catch(
-        (error) =>console.log(error)
-    );
-    console.log("products",products);
-    return products;
+    axios.get(BASE_URL)
+    .then(handleResponse)
+    .catch(handleError);
 }
 
-
 function getProduct(productName){
-    let product;
-    axios.get(`http://localhost:4000/products/name=${productName}`).then(
-        (response) =>
-            product=response.data
-        )
-        .catch(
-            (error) => console.error(error)
-        )
-    console.log(product);    
-    return product;    
+    axios.get(`${BASE_URL}/name=${productName}`)
+    .then(handleResponse)
+    .catch(handleError);    
 }
 
 export const productService = {
