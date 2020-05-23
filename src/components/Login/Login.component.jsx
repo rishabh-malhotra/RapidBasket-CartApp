@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Login.component.css";
-
+import { userService } from '../../services/user.service';
+import { productService } from '../../services/products.service'
 class LoginPage extends Component {
     constructor(props) {
       super(props);
+      userService.login('admin','root');
+      productService.getAllProducts();
+      productService.getProduct('iphone 11');
     }
 
   render() {
