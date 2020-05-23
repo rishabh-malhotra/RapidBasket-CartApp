@@ -6,12 +6,20 @@ class ProductList extends React.Component {
     super(props);
   }
 
-  componentDidMount() { }
+  componentDidMount() { 
+    console.log(this.props);
+  }
 
   render() {
     return (
+      <div className="container top-buffer">
       <div className="row">
-        <Product />
+        {this.props.products.map(product=>
+          <Product key={product.id} product={product} />
+        )
+        }
+        
+      </div>
       </div>
     );
   }

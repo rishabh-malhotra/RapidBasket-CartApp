@@ -4,7 +4,7 @@ class SortComponent extends React.Component {
         return (
             <div className="pull-right">
                 <div className="form-inline">
-                        <label for="sort">Sort by:</label>
+                        <label htmlFor="sort">Sort by:</label>
                         <select style={{width:"70%"}} 
                             className="form-control"
                             id="sort"

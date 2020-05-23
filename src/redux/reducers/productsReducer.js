@@ -7,13 +7,17 @@ const initalState={
 }
 
 export const productsReducer = (state = initalState , action) => {
-    switch(action.types){
+    
+    switch(action.type){
         case types.GET_PRODUCTS_SUCCESS :
-            return Object.assign({}, ...state, {products:action.products}, {totalProducts:action.products.length}, {isProductsLoading:false} );
-        case types.GET_PRODUCT_REQUEST:  
-            return Object.assign({}, ...state, {isProductsLoading:false} );
+            console.log("1",action);
+            return Object.assign({}, ...[state], {products:action.products}, {totalProducts:action.products.length}, {isProductsLoading:false} );
+        case types.GET_PRODUCTS_REQUEST:  
+            console.log("2",action);
+            return Object.assign({}, ...[state], {isProductsLoading:true} );
         case types.GET_PRODUCTS_ERROR :
-            return Object.assign({}, ...state, {error:action.error}, {isProductsLoading:false} );    
+            console.log("4",action)
+            return Object.assign({}, ...[state], {error:action.error}, {isProductsLoading:false} );    
         default:  
             return initalState  
     } 
