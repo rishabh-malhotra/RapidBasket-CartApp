@@ -1,151 +1,219 @@
 {
-    "products":
-    [
-        {
-            "id":1,
-            "name":"Apple Iphone 11",
-            "slug":"iphone-11",
-            "price":73600,
-            "image":"https://i.ibb.co/mJ6Z1SD/iphone-11.jpg"
-        },
-        {
-            "id":2,
-            "name":"Apple Iphone X",
-            "slug":"iphone-x",
-            "price":65000,
-            "image":"https://i.ibb.co/THJMCCr/iphone-x.jpg"
-        },
-        {
-            "id":3,
-            "name":"honor 9x Pro",
-            "slug":"honor-9x-pro",
-            "price":18000,
-            "image":"https://i.ibb.co/F6yCmRH/honor-9x-pro.jpg"
-        },
-        {
-            "id":4,
-            "name":"Realme Narzo 10",
-            "slug":"realme-narzo-10",
-            "price":11999,
-            "image":"https://i.ibb.co/nkV2S28/realme-narzo-10.jpg"
-            
-        },
-        {
-            "id":5,
-            "name":"Realme 6",
-            "slug":"realme-6",
-            "price":15999,
-            "image":"https://i.ibb.co/LPKvfW4/realme-6.jpg"
-        },
-        {
-            "id":6,
-            "name":"Oppo A7",
-            "slug":"oppo-a7",
-            "price":10990,
-            "image":"https://i.ibb.co/PNz9Kww/oppo-a7.jpg"
-        },
-        {
-            "id":7,
-            "name":"Vivo Z1 Pro",
-            "slug":"vivo-z1pro",
-            "price":16990,
-            "image":"https://i.ibb.co/XWVmBH1/vivo-z1pro.jpg"
-        },
-        {
-            "id":8,
-            "name":"Poco X2",
-            "slug":"poco-x2",
-            "price":20990,
-            "image":"https://i.ibb.co/w43hnS1/poco-x2.jpg"
-        },
-        {
-            "id":9,
-            "name":"OnePlus 7t",
-            "slug":"oneplus-7t",
-            "price":37880,
-            "image":"https://i.ibb.co/vczgZSR/oneplus-7t.jpg"
-        },
-        {
-            "id":10,
-            "name":"Oppo A31",
-            "slug":"oppo-a31",
-            "price":100000,
-            "image":"https://i.ibb.co/0ynFJkb/oppo-a31.jpg"
-        },
-        {
-            "id":11,
-            "name":"Realme C3",
-            "slug":"realme-c3",
-            "price":13000,
-            "image":"https://i.ibb.co/Zmk7kHw/realme-c3jpeg.jpg"
-        },
-        {
-            "id":12,
-            "name":"Redmi Note 8 Pro",
-            "slug":"redmi-note-8-pro",
-            "price":16995,
-            "image":"https://i.ibb.co/NyCXW81/redmi-note-8-pro.jpg"
-        },
-        {
-            "id":13,
-            "name":"Poco F1",
-            "slug":"poco-f1",
-            "price":17665,
-            "image":"https://i.ibb.co/gVyHZKn/pocophone-f1.jpg"
-        },
-        {
-            "id":14,
-            "name":"Vivo Z1x",
-            "slug":"vivo-z1x",
-            "price":18990,
-            "image":"https://i.ibb.co/98dhGRR/vivo-z1x.jpg"
-        },
-        {
-            "id":15,
-            "name":"Apple Iphone SE",
-            "slug":"apple-iphone-se",
-            "price":43000,
-            "image":"https://i.ibb.co/xsvV94Y/apple-iphone-se.jpg"
-        },
-        {
-            "id":16,
-            "name":"Vivo Y19",
-            "slug":"vivo-y19",
-            "price":15000,
-            "image":"https://i.ibb.co/D128zZR/vivo-y19.jpg"
-        },
-        {
-            "id":17,
-            "name":"Apple Iphone XS Max",
-            "slug":"apple-iphone-xs-max",
-            "price":119900,
-            "image":"https://i.ibb.co/NYJt8Dz/apple-iphone-xs-max.jpg"
-        },
-        {
-            "id":18,
-            "name":"Motorola Razr",
-            "slug":"motorola-razr",
-            "price":124999,
-            "image":"https://i.ibb.co/hVKrPhD/motorola-razr.jpg"
-        }
-
-    ],
-    "users":
-    [
-        {
-        "id":1,
-        "name":"admin",
-        "password":"root"
-        },
-        {
-            "id":2,
-            "name":"Rishabh",
-            "password":"rmalhotra"
-        },
-        {
-            "id":3,
-            "name":"admin",
-            "password":"root2"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple Iphone 11",
+      "slug": "iphone-11",
+      "price": 73600,
+      "image": "https://i.ibb.co/Cs46HQ8/iphone-11.jpg",
+      "manufacturer": "Apple",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "4GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 2,
+      "name": "Apple Iphone X",
+      "slug": "iphone-x",
+      "price": 65000,
+      "image": "https://i.ibb.co/Kxh6vWD/iphone-x.jpg",
+      "manufacturer": "Apple",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "4GB",
+      "storage": "64GB"
+    },
+    {
+      "id": 3,
+      "name": "honor 9x Pro",
+      "slug": "honor-9x-pro",
+      "price": 18000,
+      "image": "https://i.ibb.co/6y8sTdy/honor-9x-pro.jpg",
+      "manufacturer": "Honor",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "6GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 4,
+      "name": "Realme Narzo 10",
+      "slug": "realme-narzo-10",
+      "price": 11999,
+      "image": "https://i.ibb.co/WyQ32v0/realme-narzo-10.jpg",
+      "manufacturer": "Realme",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "4GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 5,
+      "name": "Realme 6",
+      "slug": "realme-6",
+      "price": 15999,
+      "image": "https://i.ibb.co/0m15nn1/realme-6.jpg",
+      "manufacturer": "Realme",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "8GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 6,
+      "name": "Oppo A7",
+      "slug": "oppo-a7",
+      "price": 10990,
+      "image": "https://i.ibb.co/kQKMr62/oppo-a7.jpg",
+      "manufacturer": "Oppo",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "4GB",
+      "storage": "64GB"
+    },
+    {
+      "id": 7,
+      "name": "Vivo Z1 Pro",
+      "slug": "vivo-z1-pro",
+      "price": 16990,
+      "image": "https://i.ibb.co/wYDD1xt/vivo-z1pro.jpg",
+      "manufacturer": "Vivo",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "6GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 8,
+      "name": "Poco X2",
+      "slug": "poco-x2",
+      "price": 20990,
+      "image": "https://i.ibb.co/CbhSbjp/poco-x2.jpg",
+      "manufacturer": "Poco from Xiaomi",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "8GB",
+      "storage": "256GB"
+    },
+    {
+      "id": 9,
+      "name": "OnePlus 7t",
+      "slug": "oneplus-7t",
+      "price": 37880,
+      "image": "https://i.ibb.co/Hhmm2NW/oneplus-7t.jpg",
+      "manufacturer": "OnePlus",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "8GB",
+      "storage": "256GB"
+    },
+    {
+      "id": 10,
+      "name": "Oppo A31",
+      "slug": "oppo-a31",
+      "price": 100000,
+      "image": "https://i.ibb.co/cTWW53g/oppo-a31.jpg",
+      "manufacturer": "Oppo",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "4GB",
+      "storage": "64GB"
+    },
+    {
+      "id": 11,
+      "name": "Realme C3",
+      "slug": "realme-c3",
+      "price": 13000,
+      "image": "https://i.ibb.co/B4Wbh4T/realme-c3jpeg.jpg",
+      "manufacturer": "Realme",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "3GB",
+      "storage": "32GB"
+    },
+    {
+      "id": 12,
+      "name": "Redmi Note 8 Pro",
+      "slug": "redmi-note-8-pro",
+      "price": 16995,
+      "image": "https://i.ibb.co/sF4N7SL/redmi-note-8-pro.jpg",
+      "manufacturer": "Xiaomi",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "6GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 13,
+      "name": "Poco F1",
+      "slug": "poco-f1",
+      "price": 17665,
+      "image": "https://i.ibb.co/Vtqm4Wy/pocophone-f1.jpg",
+      "manufacturer": "Poco from Xiaomi",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "6GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 14,
+      "name": "Vivo Z1x",
+      "slug": "vivo-z1x",
+      "price": 18990,
+      "image": "https://i.ibb.co/s3Xxr92/vivo-z1x.jpg",
+      "manufacturer": "Vivo",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "6GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 15,
+      "name": "Apple Iphone SE",
+      "slug": "apple-iphone-se",
+      "price": 43000,
+      "image": "https://i.ibb.co/fM8592q/apple-iphone-se.jpg",
+      "manufacturer": "Apple",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "4GB",
+      "storage": "64GB"
+    },
+    {
+      "id": 16,
+      "name": "Vivo Y19",
+      "slug": "vivo-y19",
+      "price": 15000,
+      "image": "https://i.ibb.co/93pmp20/vivo-y19.jpg",
+      "manufacturer": "Vivo",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "4GB",
+      "storage": "128GB"
+    },
+    {
+      "id": 17,
+      "name": "Apple Iphone XS Max",
+      "slug": "apple-iphone-xs-max",
+      "price": 119900,
+      "image": "https://i.ibb.co/HCw6NPb/apple-iphone-xs-max.jpg",
+      "manufacturer": "Apple",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "6GB",
+      "storage": "512GB"
+    },
+    {
+      "id": 18,
+      "name": "Motorola Razr",
+      "slug": "motorola-razr",
+      "price": 124999,
+      "image": "https://i.ibb.co/bH0LMD0/motorola-razr.jpg",
+      "manufacturer": "Motorola",
+      "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn className master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+      "ram": "6GB",
+      "storage": "128GB"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "root"
+    },
+    {
+      "id": 2,
+      "name": "Rishabh",
+      "password": "rmalhotra"
+    },
+    {
+      "id": 3,
+      "name": "admin",
+      "password": "root2"
+    }
+  ]
 }

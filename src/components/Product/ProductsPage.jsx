@@ -6,11 +6,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { getProducts } from '../../redux/actions/productActions';
 import PropTypes from "prop-types";
+
 class ProductsPage extends Component {
     state = {
         products: [],
         isLoading: false,
-        pageOfItems:[]
+        filteredProducts:[]
     }
 
     componentDidMount() {
@@ -18,7 +19,7 @@ class ProductsPage extends Component {
         console.log("props",this.props)
     }
 
-    onChangePage = pageOfItems => this.setState({ pageOfItems: pageOfItems });
+    onChangePage = filteredProducts => this.setState({ filteredProducts: filteredProducts });
 
     render() {
         let conditionalComponent;
@@ -28,7 +29,7 @@ class ProductsPage extends Component {
             conditionComponent2 = <div></div>
         }
         else{
-            conditionalComponent = <ProductList products={this.props.products} pageOfItems={this.state.pageOfItems} productsCount={this.props.productsCount} />
+            conditionalComponent = <ProductList  filteredProducts={this.state.filteredProducts} productsCount={this.props.productsCount} />
             conditionComponent2=<Pagination items={this.props.products}  onChangePage={this.onChangePage}/>
         }
         return (
@@ -55,12 +56,12 @@ class ProductsPage extends Component {
     }
 }
 
-// ProductsPage.propTypes = {
-//     products: PropTypes.array.isRequired,
-//     productsCount:PropTypes.number.isRequired,
-//     actions: PropTypes.object.isRequired,
-//     isLoading: PropTypes.bool.isRequired
-//   };
+ProductsPage.propTypes = {
+    products: PropTypes.array.isRequired,
+    productsCount:PropTypes.number.isRequired,
+    actions: PropTypes.object.isRequired,
+    isLoading: PropTypes.bool.isRequired
+  };
 
 const mapStateToProps = state => {
     return {

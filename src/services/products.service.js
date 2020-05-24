@@ -9,8 +9,9 @@ export function getAllProducts(){
     .catch(handleError);
 }
 
-export function getProduct(productName){
-    return axios.get(`${BASE_URL}/name=${productName}`)
+export function getProduct(productId){
+    console.log("api",productId)
+    return fetch(`${BASE_URL}/${productId}`)
     .then(handleResponse)
     .catch(handleError);    
 }

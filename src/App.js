@@ -16,7 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={ProductsPage} />
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/product/:slug" component={ProductDetail} />
+        <Route exact path="/product/:id" component={ProductDetail} />
       </Switch>
     </React.Fragment>
   );

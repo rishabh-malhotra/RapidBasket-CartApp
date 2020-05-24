@@ -25,6 +25,7 @@ export function getAllProductsError(error){
 }
 
 export function getProductSuccess(product){
+    console.log(product)
     return {
         type : types.GET_PRODUCT_SUCCESS,
         product
@@ -61,11 +62,15 @@ export function getProducts(){
 }
 
 
-export function getProduct() {
+export function getProduct(productId) {
+    console.log("ACTIONS")
     return function(dispatch){
         dispatch(getProductRequest());
-        return productService.getProduct()
-        .then((product)=>dispatch(getProductSuccess(product)))
+        return productService.getProduct(productId)
+        .then((product)=>{
+            console.log(product)
+            dispatch(getProductSuccess(product))
+        })
         .catch( (error) =>{
             dispatch(getProductError(error));
             throw error;
