@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ProductList from './ProductList.component';
 import SearchComponent from '../common/Search.component'
-import { SortComponent, Spinner } from "../common";
+import { SortComponent, Spinner, Pagination } from "../common";
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { getProducts } from '../../redux/actions/productActions';
@@ -9,7 +9,8 @@ import PropTypes from "prop-types";
 class ProductsPage extends Component {
     state = {
         products: [],
-        isLoading: false
+        isLoading: false,
+        pageOfItems:[]
     }
 
     componentDidMount() {
@@ -17,13 +18,18 @@ class ProductsPage extends Component {
         console.log("props",this.props)
     }
 
+    onChangePage = pageOfItems => this.setState({ pageOfItems: pageOfItems });
+
     render() {
         let conditionalComponent;
+        let conditionComponent2;
         if(this.props.isLoading){
             conditionalComponent= <Spinner />
+            conditionComponent2 = <div></div>
         }
         else{
-            conditionalComponent = <ProductList products={this.props.products} productsCount={this.props.productsCount} />
+            conditionalComponent = <ProductList products={this.props.products} pageOfItems={this.state.pageOfItems} productsCount={this.props.productsCount} />
+            conditionComponent2=<Pagination items={this.props.products}  onChangePage={this.onChangePage}/>
         }
         return (
             <React.Fragment>
@@ -43,6 +49,7 @@ class ProductsPage extends Component {
                     </div>
                 </div>
                {conditionalComponent}
+               {conditionComponent2}
             </React.Fragment>
         );
     }
