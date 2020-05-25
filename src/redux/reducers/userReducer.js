@@ -5,13 +5,13 @@ const initalState={
     isLoading:false,
 }
 
-export const productsReducer = (state = initalState , action) => {
+export const userReducer = (state = initalState , action) => {
     
     switch(action.type){
         case types.LOGIN_SUCCESS :
             console.log("1",action);
             return Object.assign({}, ...[state], {user:action.user},  {isLoading:false} );
-        case types.LOGIN_REQUEST_REQUEST:  
+        case types.LOGIN_REQUEST:  
             console.log("2",action);
             return Object.assign({}, ...[state], {isLoading:true} );
         case types.LOGIN_FAILED:
