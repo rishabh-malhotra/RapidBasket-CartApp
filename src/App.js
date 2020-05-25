@@ -5,9 +5,9 @@ import NavbarComponent from "./components/Shared/Navbar.component";
 import { Route, Switch, Redirect } from "react-router-dom";
 import LoginPage from "./components/Login/Login.component";
 import { ProductsPage, ProductDetail } from "./components/Product";
-import { CartPage } from "./components/Cart";
 import { connect } from "react-redux";
 import { login } from "./redux/actions/userActions";
+import CheckoutPage from './components/Checkout/Checkout.component'
 
 const TITLE = "Rapid Basket";
 class App extends React.Component {
@@ -42,7 +42,7 @@ class App extends React.Component {
             }
           />
           <Route exact path="/product/:id" component={ProductDetail} />
-          <Route exact path="/cart" component={CartPage} />
+          <Route exact path="/cart" component={CheckoutPage} />
           <Redirect from="*" to="/" />
         </Switch>
       </React.Fragment>

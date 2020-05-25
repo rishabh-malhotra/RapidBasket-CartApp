@@ -1,20 +1,20 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignInAlt, faMobileAlt, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { logOut } from '../../redux/actions/userActions';
+import CartIcon from '../Cart/cart-icon';
+import CartDropDown from '../Cart/cartDropdown.component'
 
 const NavbarComponent = (props) => {
-  //let ={props}
-  //let user=props.currentUser?props.currentUser.name:null;
-  //console.log("-------------USER",user,props.currentUser)
   function handleLogout() {
     console.log("---------------------asdas")
     props.logOut();
   }
   return (
+
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand as={Link} to={'/'}>RapidBasket</Navbar.Brand>
       <Nav className="mr-auto">
@@ -22,10 +22,11 @@ const NavbarComponent = (props) => {
           <FontAwesomeIcon icon={faMobileAlt} /> Products
           </NavLink>
       </Nav>
+      
         {
           props.currentUser ?
           <Nav className="ml-auto">
-            <NavLink exact className="nav-link" as={NavLink} to="cart"><FontAwesomeIcon icon={faShoppingCart} /> Cart (0)</NavLink>
+            
             <NavDropdown title={props.currentUser} id="basic-nav-dropdown">
               <NavDropdown.Item onClick={() => handleLogout()}>Logout</NavDropdown.Item>
             </NavDropdown>
@@ -36,10 +37,18 @@ const NavbarComponent = (props) => {
               <FontAwesomeIcon icon={faSignInAlt} /> Login
               </NavLink>
               </Nav>
+              
         }
-      
-    </Navbar>
-  );
+         <CartIcon />
+        <div>
+          {
+            props.hidden? null: <CartDropDown />
+          }
+        </div>
+        </Navbar>
+     
+  )
+    
 };
 
 const mapDispatchToProps = (dispatch) => ({
@@ -47,9 +56,9 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const mapStateToProps = state => {
-  console.log(state.user.user)
   return {
-    currentUser: state.user.user ? state.user.user.name : null
+    currentUser: state.user.user ? state.user.user.name : null,
+    hidden:state.cart.hidden
   }
 }
 

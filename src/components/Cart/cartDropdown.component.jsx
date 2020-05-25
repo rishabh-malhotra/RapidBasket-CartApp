@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
 
-import CustomButton from '../custom-button/custom-button.component';
-import CartItem from '../cart-item/cart-item.component';
-import { selectCartItems } from '../../redux/cart/cart.selectors';
-import { toggleCartHidden } from '../../redux/cart/cart.actions.js';
+//import CustomButton from '../custom-button/custom-button.component';
+import CartItem from './Carttem.component';
+import { selectCartItems } from '../../redux/selectors/cartSelector';
+import { toggleCartHidden } from '../../redux/actions/cartActions';
 
-import './cart-dropdown.styles.scss';
+import './cartDropdown.style.scss';
 
 const CartDropdown = ({ cartItems, history, dispatch }) => (
   <div className='cart-dropdown'>
@@ -21,14 +21,15 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
         <span className='empty-message'>Your cart is empty</span>
       )}
     </div>
-    <CustomButton
+    <button
+      className="btn btn-primary"
       onClick={() => {
-        history.push('/checkout');
+        history.push('/cart');
         dispatch(toggleCartHidden());
       }}
     >
       GO TO CHECKOUT
-    </CustomButton>
+    </button>
   </div>
 );
 

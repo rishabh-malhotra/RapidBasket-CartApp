@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './ProductDetail.css';
 import { connect } from "react-redux";
 import { getProduct } from '../../redux/actions/productActions';
+import { addItem } from '../../redux/actions/cartActions';
 import { Spinner } from '../common'
 
 
@@ -38,7 +39,7 @@ class ProductDetail extends Component {
                                 <p><span className="product-exp-title">Price : </span>&#8377; {this.props.product.price}</p>
                                 <p><span className="product-exp-title">RAM : </span> {this.props.product.ram}</p>
                                 <p><span className="product-exp-title">Storage : </span> {this.props.product.storage}</p>
-                                <button className="btn btn-success btn-sm" >Add To Cart</button>
+                                <button className="btn btn-success btn-sm" onClick={()=>{this.props.addItem(this.props.product)}}>Add To Cart</button>
                                 {/* onClick={cartClickHandler} */}
                             </div>
 
@@ -70,7 +71,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    getProduct: (args) => dispatch(getProduct(args))
+    getProduct: (args) => dispatch(getProduct(args)),
+    addItem: item => dispatch(addItem(item))
     // return {
     //     actions: {
     //         getProduct(args) : bindActionCreators(getProduct(args), dispatch)
