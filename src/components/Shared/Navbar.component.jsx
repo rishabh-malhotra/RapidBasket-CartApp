@@ -7,7 +7,7 @@ import { NavLink, Link } from "react-router-dom";
 const NavbarComponent = () => {
   return (
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand exact activeClassName="current" as={Link} to={'/'}>RapidBasket</Navbar.Brand>
+      <Navbar.Brand  as={Link} to={'/'}>RapidBasket</Navbar.Brand>
       <Nav className="mr-auto">
         <NavLink exact activeStyle={{ color: 'green' }} className="nav-link" as={NavLink} to='/'>
           <FontAwesomeIcon icon={faMobileAlt} /> Products

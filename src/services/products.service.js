@@ -3,8 +3,9 @@ import { handleResponse,handleError } from './apiUtils'
 
 const BASE_URL = 'http://localhost:4000/products';
 
-export function getAllProducts(){
-    return fetch(BASE_URL)
+export function getAllProducts(queryString){
+    console.log(BASE_URL + queryString)
+    return fetch(BASE_URL + queryString)
     .then(handleResponse)
     .catch(handleError);
 }
@@ -15,4 +16,7 @@ export function getProduct(productId){
     .then(handleResponse)
     .catch(handleError);    
 }
+
+
+
 
