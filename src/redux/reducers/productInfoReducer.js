@@ -18,6 +18,6 @@ export const productReducer = (state=initalState,action)=>{
             console.log("7")
             return Object.assign({}, ...[state], {error:action.error},{isProductInfoLoading:false});
         default:
-            return initalState    
+            return state    
     }
 } 

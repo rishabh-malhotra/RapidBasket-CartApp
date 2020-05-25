@@ -15,7 +15,7 @@ const Search = (props) => {
     return (
         <React.Fragment>
             <Form inline>
-                <FormControl type="text" placeholder="Search" aria-label="Search" className="form-control mr-sm-2" onChange={(event) => handleSearch(event)} />
+                <FormControl type="text" placeholder="Search" aria-label="Search"   className="form-control mr-sm-2" value={props.searcht} onChange={(event) => handleSearch(event)} />
             </Form>
         </React.Fragment>
     );

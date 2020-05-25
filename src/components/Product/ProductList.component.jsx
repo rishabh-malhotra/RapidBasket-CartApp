@@ -3,7 +3,6 @@ import Product from "./Product.component";
 import PropTypes from "prop-types";
 
 const ProductList = ({filteredProducts,productsCount}) => {
-  console.log(filteredProducts)
   return (
     <div className="container top-buffer">
       <div className="row">

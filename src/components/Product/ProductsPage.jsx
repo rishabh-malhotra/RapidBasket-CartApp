@@ -4,7 +4,7 @@ import SearchComponent from '../common/Search.component'
 import { SortComponent, Spinner, Pagination } from "../common";
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
-import { getProducts,updateSearch } from '../../redux/actions/productActions';
+import { getProducts,updateSearch,updateSort } from '../../redux/actions/productActions';
 import PropTypes from "prop-types";
 
 class ProductsPage extends Component {
@@ -18,19 +18,23 @@ class ProductsPage extends Component {
     constructor(props){
         super(props);
         this.updateSearch = this.updateSearch.bind(this);
-
+        this.sortProduct=this.sortProduct.bind(this);
+        this.props.getAllProducts({searchText:this.props.searchCriteria});
     }
 
     componentDidMount() {
-        this.props.getAllProducts({searchText:this.props.searchCriteria});
         console.log("props",this.props)
     }
 
     onChangePage = filteredProducts => this.setState({ filteredProducts: filteredProducts });
+    
+    sortProduct (sortOrder) {
+        console.log(sortOrder)
+        this.props.updateSort(sortOrder);
+        this.props.getAllProducts({searchText:this.props.searchCriteria,sorting : sortOrder});
+    }
 
      updateSearch (searchText){
-      console.log("SEARCHTEXT---------------------------",searchText)
-      console.log("props-------------",this.props)
       this.props.updateSearch(searchText);
       this.props.getAllProducts({searchText:searchText});
     }
@@ -56,10 +60,10 @@ class ProductsPage extends Component {
                     </div>
                     <div className="row mt-20">
                         <div className="col-6">
-                            <SearchComponent onSearchProduct={this.updateSearch}/>
+                            <SearchComponent onSearchProduct={this.updateSearch} searcht={this.props.searchCriteria}/>
                         </div>
                         <div className="col-6">
-                            <SortComponent />
+                            <SortComponent sortOrder={this.props.sortOrder} handleSort={this.sortProduct}/>
                         </div>
                     </div>
                 </div>
@@ -83,7 +87,8 @@ const mapStateToProps = state => {
         products: state.products.products,
         productsCount: state.products.totalProducts,
         isLoading: state.products.isProductsLoading,
-        searchCriteria:state.searchProducts.searchCriteria
+        searchCriteria:state.searchProducts.searchCriteria,
+        sortOrder:state.sortProducts.orderCode
     }
 }
 
@@ -93,7 +98,8 @@ const mapDispatchToProps = (dispatch) => ({
         //     getAllProducts: bindActionCreators(getProducts, dispatch)
         // }
         getAllProducts:(args)=>dispatch(getProducts(args)),
-        updateSearch:(searchText) =>dispatch(updateSearch(searchText))
+        updateSearch:(searchText) =>dispatch(updateSearch(searchText)),
+        updateSort : (orderCode) => dispatch(updateSort(orderCode)),
     })
 //}
 

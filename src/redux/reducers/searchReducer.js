@@ -9,6 +9,6 @@ export const searchReducer = (state=initialState,action) =>{
         case types.UPDATE_SEARCH:
             return Object.assign({},...[state],{searchCriteria: action.searchText});
         default:
-            return initialState;    
+            return state;    
     }
 }

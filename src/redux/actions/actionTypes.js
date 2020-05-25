@@ -12,5 +12,8 @@ export const LOGIN_SUCCESS = "LOGIN SUCCESS";
 export const LOGIN_FAILED = "LOGIN FAILED";
 export const LOGIN_ERROR = "LOGIN ERROR";
 
+export const LOGOUT = "LOGOUT"
+
 export const UPDATE_SEARCH = "UPDATE_SEARCH";
+export const UPDATE_SORT="UPDATE_SORT"
 

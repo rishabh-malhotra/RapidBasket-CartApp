@@ -45,13 +45,21 @@ export function getProductError(error) {
 }
 
 export function getProducts(args) {
+    console.log("-------------------args",args)
   return function (dispatch) {
     dispatch(getAllProductsRequest());
     let searchText = args && args.searchText;
+    let sortingtOrder = args && args.sorting;
     let queryParameters = [];
     if (searchText && searchText.trim() !== "") {
       queryParameters.push({ key: "q", value: searchText });
     }
+    if(sortingtOrder===0 || sortingtOrder===1){
+        console.log("----------------------sortingOrder")
+        queryParameters.push({key : '_sort', value:'price'});
+        let order = sortingtOrder === 0 ? 'asc' : 'desc';
+        queryParameters.push({key : '_order', value:order});
+      }
 
     let queryString = "";
     if (queryParameters.length > 0) queryString = "?";
@@ -62,7 +70,6 @@ export function getProducts(args) {
       }
       queryString = queryString + queryParameter.key + "=" + queryParameter.value;
     }
-
 
     return productService
       .getAllProducts(queryString)
@@ -78,7 +85,6 @@ export function getProducts(args) {
 }
 
 export function getProduct(productId) {
-  console.log("ACTIONS");
   return function (dispatch) {
     dispatch(getProductRequest());
     return productService
@@ -103,3 +109,14 @@ export function updateSearch(searchText){
         })
     }
 }
+
+export const updateSort = orderCode => {
+
+    return function(dispatch) {
+      dispatch({
+        type : types.UPDATE_SORT,
+        orderCode
+      });   
+  
+  }
+  }
