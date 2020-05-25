@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import NavbarComponent from "./components/Shared/Navbar.component";

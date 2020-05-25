@@ -3,7 +3,6 @@ import ProductList from './ProductList.component';
 import SearchComponent from '../common/Search.component'
 import { SortComponent, Spinner, Pagination } from "../common";
 import { connect } from 'react-redux';
-import { bindActionCreators } from "redux";
 import { getProducts,updateSearch,updateSort } from '../../redux/actions/productActions';
 import PropTypes from "prop-types";
 

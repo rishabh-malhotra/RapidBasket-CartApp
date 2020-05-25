@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './ProductDetail.css';
 import { connect } from "react-redux";
 import { getProduct } from '../../redux/actions/productActions';
-import { bindActionCreators } from "redux";
 import { Spinner } from '../common'
 
 
@@ -27,10 +26,8 @@ class ProductDetail extends Component {
                     <div className="container top-buffer">
                         <div className="row mt-20">
                             <div className=" col-sm-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                    <img className="product-desc-img" src={this.props.product.image} style={{ float: 'left' }} alt="" />
-                                </div>
+                                <div className="product-detail-img">
+                                    <img style={{ float: 'center' }} className="custom-img" src={this.props.product.image} alt={this.props.product.slug} />
                                 </div>
                             </div>
 

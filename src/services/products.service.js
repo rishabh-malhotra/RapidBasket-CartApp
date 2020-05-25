@@ -1,4 +1,3 @@
-import axios from "axios";
 import { handleResponse,handleError } from './apiUtils'
 
 const BASE_URL = 'http://localhost:4000/products';

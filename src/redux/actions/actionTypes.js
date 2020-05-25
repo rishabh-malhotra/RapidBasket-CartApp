@@ -17,3 +17,6 @@ export const LOGOUT = "LOGOUT"
 export const UPDATE_SEARCH = "UPDATE_SEARCH";
 export const UPDATE_SORT="UPDATE_SORT"
 
+export const TOGGLE_CART_HIDDEN= "TOGGLE_CART_HIDDEN";
+export const ADD_ITEM= "ADD_ITEM";
+

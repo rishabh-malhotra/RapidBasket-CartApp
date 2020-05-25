@@ -29,7 +29,7 @@ export function userLoginFailed() {
 export function login(args) {
   console.log(args);
   let { username, password } = args;
-    
+  username=username.toLowerCase();  
   let requiredUser = {};
   return function (dispatch) {
     dispatch(userLoginRequest());
