@@ -5,9 +5,7 @@ const Search = (props) => {
 
 
     let handleSearch = (event) => {
-        console.log("propasdasdasssssss",props)
-        console.log("EVENT--------------------",event.target)
-        console.log(event.target.value)
+      
         event.preventDefault();
         props.onSearchProduct(event.target.value);
 

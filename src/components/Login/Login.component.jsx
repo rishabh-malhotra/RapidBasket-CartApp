@@ -18,7 +18,7 @@ class LoginPage extends Component {
   }
 
   handleSubmit(event){
-    console.log("event---------",event.target);
+    
     event.preventDefault();
     this.setState({ submitted: true });
     const { username, password } = this.state;
@@ -29,10 +29,10 @@ class LoginPage extends Component {
 
 
   handleChange(event){
-    console.log("handh",event);
+    
     const{ name, value} = event.target;
     this.setState({[name]:value});
-    console.log(this.state)
+    
   }
 
 

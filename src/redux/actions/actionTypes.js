@@ -19,4 +19,6 @@ export const UPDATE_SORT="UPDATE_SORT"
 
 export const TOGGLE_CART_HIDDEN= "TOGGLE_CART_HIDDEN";
 export const ADD_ITEM= "ADD_ITEM";
+export const REMOVE_ITEM="REMOVE ITEM";
+export const CLEAR_ITEM_FROM_CART="CLEAR ITEM FROM CART";
 

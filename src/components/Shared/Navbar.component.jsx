@@ -10,7 +10,6 @@ import CartDropDown from '../Cart/cartDropdown.component'
 
 const NavbarComponent = (props) => {
   function handleLogout() {
-    console.log("---------------------asdas")
     props.logOut();
   }
   return (
@@ -22,33 +21,33 @@ const NavbarComponent = (props) => {
           <FontAwesomeIcon icon={faMobileAlt} /> Products
           </NavLink>
       </Nav>
-      
-        {
-          props.currentUser ?
+
+      {
+        props.currentUser ?
           <Nav className="ml-auto">
-            
+
             <NavDropdown title={props.currentUser} id="basic-nav-dropdown">
               <NavDropdown.Item onClick={() => handleLogout()}>Logout</NavDropdown.Item>
             </NavDropdown>
-            </Nav>
-             :
-             <Nav className="ml-auto">
+          </Nav>
+          :
+
+          <Nav className="ml-auto">
             <NavLink exact activeStyle={{ color: 'green' }} className="nav-link" as={NavLink} to='/login'>
               <FontAwesomeIcon icon={faSignInAlt} /> Login
               </NavLink>
-              </Nav>
-              
+          </Nav>
+      }
+      <CartIcon />
+      <div>
+        {
+          props.hidden ? null : <CartDropDown />
         }
-         <CartIcon />
-        <div>
-          {
-            props.hidden? null: <CartDropDown />
-          }
-        </div>
-        </Navbar>
-     
+      </div>
+    </Navbar>
+
   )
-    
+
 };
 
 const mapDispatchToProps = (dispatch) => ({
@@ -58,7 +57,7 @@ const mapDispatchToProps = (dispatch) => ({
 const mapStateToProps = state => {
   return {
     currentUser: state.user.user ? state.user.user.name : null,
-    hidden:state.cart.hidden
+    hidden: state.cart.hidden
   }
 }
 

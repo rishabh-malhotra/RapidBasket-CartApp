@@ -21,14 +21,12 @@ class ProductsPage extends Component {
         this.props.getAllProducts({searchText:this.props.searchCriteria});
     }
 
-    componentDidMount() {
-        console.log("props",this.props)
-    }
+   
 
     onChangePage = filteredProducts => this.setState({ filteredProducts: filteredProducts });
     
     sortProduct (sortOrder) {
-        console.log(sortOrder)
+      
         this.props.updateSort(sortOrder);
         this.props.getAllProducts({searchText:this.props.searchCriteria,sorting : sortOrder});
     }

@@ -24,7 +24,7 @@ export function getAllProductsError(error) {
 }
 
 export function getProductSuccess(product) {
-  console.log(product);
+
   return {
     type: types.GET_PRODUCT_SUCCESS,
     product,
@@ -45,7 +45,7 @@ export function getProductError(error) {
 }
 
 export function getProducts(args) {
-    console.log("-------------------args",args)
+   
   return function (dispatch) {
     dispatch(getAllProductsRequest());
     let searchText = args && args.searchText;
@@ -55,7 +55,7 @@ export function getProducts(args) {
       queryParameters.push({ key: "q", value: searchText });
     }
     if(sortingtOrder===0 || sortingtOrder===1){
-        console.log("----------------------sortingOrder")
+       
         queryParameters.push({key : '_sort', value:'price'});
         let order = sortingtOrder === 0 ? 'asc' : 'desc';
         queryParameters.push({key : '_order', value:order});
@@ -74,7 +74,7 @@ export function getProducts(args) {
     return productService
       .getAllProducts(queryString)
       .then((products) => {
-        console.log("products", products);
+       
         dispatch(getAllProductsSuccess(products));
       })
       .catch((error) => {
@@ -90,7 +90,7 @@ export function getProduct(productId) {
     return productService
       .getProduct(productId)
       .then((product) => {
-        console.log(product);
+       
         dispatch(getProductSuccess(product));
       })
       .catch((error) => {

@@ -6,7 +6,7 @@ class SortComponent extends React.Component {
     }
 
     handleSorting(event){
-        console.log(event.target.value);
+       
         event.target.value==="asc"?this.props.handleSort(0):this.props.handleSort(1);
     }
 

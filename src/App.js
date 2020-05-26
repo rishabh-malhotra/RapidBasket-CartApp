@@ -12,23 +12,20 @@ import CheckoutPage from './components/Checkout/Checkout.component'
 const TITLE = "Rapid Basket";
 class App extends React.Component {
   componentDidMount() {
-    console.log(this.props);
+   
     document.title = TITLE;
-    console.log("äsdasdasd" + localStorage.getItem("user"));
+    
     if (localStorage.getItem("user")) {
       let user = JSON.parse(localStorage.getItem("user"));
-      console.log("------------------------------------USER", user);
+     
       this.props.login({ username: user.name, password: user.password });
     }
   }
 
-  // console.log(user)
-  // if(user){
-  //   this.props.login(user)
-  // }
+  
 
   render() {
-    console.log("-------------currentuser",this.props.currentUser)
+   
     return (
       <React.Fragment>
         <NavbarComponent />
