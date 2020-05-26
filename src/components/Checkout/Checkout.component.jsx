@@ -43,6 +43,7 @@ const CheckoutPage = ({ cartItems, total }) => {
         total ?
           <button className="btn btn-success" onClick={ () => {
             if (window.confirm(`Placing order number ${uuid.v4()} placed successfully. `)) {
+              window.location.reload()
               window.location.href = "//localhost:8082/";
             }
           }}> Place Order</button> : null
