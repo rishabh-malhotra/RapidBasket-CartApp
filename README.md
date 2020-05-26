@@ -6,8 +6,9 @@ In the project directory, you can run:
 
 ### `npm start`
 
+The app is using json-server for some mock backend and hence running with it on npm start using concurrently package.
+react would run on port 8082 and json-server will run on port 4000
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
